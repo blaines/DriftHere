@@ -7,13 +7,27 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FBConnect.h"
+#import "ASIFormDataRequest.h"
 
-@class ViewController;
+@interface AppDelegate : UIResponder <UIApplicationDelegate, 
+                                      FBRequestDelegate,
+                                      FBDialogDelegate,
+                                      FBSessionDelegate> 
+{
+    Facebook*   _facebook;
+    NSArray*    _permissions;
+    NSString*        _isLoggedIn; // SO LAME BOOL FAILS
+    NSDictionary* _currentUser;
+//    NSDictionary* _currentUserToken;
+}
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
+@property (nonatomic, retain) NSString *isLoggedIn;
+@property (nonatomic, retain) NSDictionary *currentUser;
 @property (strong, nonatomic) UIWindow *window;
+@property (readonly) Facebook *facebook;
 
-@property (strong, nonatomic) ViewController *viewController;
+- (void) fbLogin;
+- (void) fbLogout;
 
 @end

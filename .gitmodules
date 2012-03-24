@@ -1,0 +1,9 @@
+[submodule "dependencies/facebook-ios-sdk"]
+	path = dependencies/facebook-ios-sdk
+	url = https://github.com/facebook/facebook-ios-sdk.git
+[submodule "dependencies/three20"]
+	path = dependencies/three20
+	url = https://github.com/facebook/three20.git
+[submodule "dependencies/asi-http-request"]
+	path = dependencies/asi-http-request
+	url = https://github.com/pokeb/asi-http-request.git
